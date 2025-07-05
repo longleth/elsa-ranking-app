@@ -22,8 +22,8 @@ function ShowLeaderBoard() {
         // Initial fetch
         fetchLeaderboard();
 
-        // Set up interval, refresh every 1 seconds
-        const intervalId = setInterval(fetchLeaderboard, 1000);
+        // Set up interval, refresh every 0.5 seconds
+        const intervalId = setInterval(fetchLeaderboard, 500);
 
         // Cleanup interval on unmount
         return () => clearInterval(intervalId);

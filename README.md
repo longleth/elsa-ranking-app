@@ -1,11 +1,15 @@
 # elsa-ranking-app
 
-# Tech stack
+# Tech stack & requirements
 - NodeJS
 - TypeScript
 - ReactJS
 
+- Node must be installed on local dev-env.
+- The quiz service and user score service must be started.
+
 # How-to
+
 Start server on local:
 ..\ranking-app>npm run dev
 

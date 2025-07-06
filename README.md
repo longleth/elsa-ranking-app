@@ -11,7 +11,8 @@
 # How-to
 
 Start server on local:
-..\ranking-app>npm run dev
+..\ranking-app> npm install
+..\ranking-app> npm run dev
 
 Access user score ranking app on local:
 http://localhost:5173/

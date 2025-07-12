@@ -10,7 +10,8 @@ function ShowLeaderBoard() {
     useEffect(() => {
         const fetchLeaderboard = () => {
             axios
-                .get('http://localhost:8080/api/quiz/leaderboard/686923eb6af25b779321f0f6')
+                .get('http://localhost:8080/api/quiz/leaderboard/68712a0ce8b11d4ba6baa8b9')
+                //.get('http://elsa-user-score:8080/api/quiz/leaderboard/68712a0ce8b11d4ba6baa8b9')
                 .then((res) => {
                     setRanks(res.data);
                 })
@@ -23,7 +24,7 @@ function ShowLeaderBoard() {
         fetchLeaderboard();
 
         // Set up interval, refresh every 0.5 seconds
-        const intervalId = setInterval(fetchLeaderboard, 500);
+        const intervalId = setInterval(fetchLeaderboard, 1000);
 
         // Cleanup interval on unmount
         return () => clearInterval(intervalId);

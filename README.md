@@ -16,3 +16,10 @@ Start server on local:
 
 Access user score ranking app on local:
 http://localhost:5173/
+
+# Docker
+ranking-app> docker build -t longlethanh/ranking-app .
+ranking-app> docker push longlethanh/ranking-app
+ranking-app> docker run -d -p 5173:5173 --name elsa-ranking-app --network elsa-vpn longlethanh/ranking-app:latest
+
+![img.png](containers.png)

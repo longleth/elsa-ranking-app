@@ -12,11 +12,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
 // @ts-ignore
-import ShowLeaderBoard from "./components/ShowLeaderBoard"
+//import ShowLeaderBoard from "./components/ShowLeaderBoard"
+import QuizSelector from "./components/QuizSelector"
 
 // Routes
 const router = createBrowserRouter([
-    { path: "/", element: <ShowLeaderBoard /> },
+    { path: "/", element: <QuizSelector /> },
 ]);
 
 createRoot(document.getElementById('root')!).render(

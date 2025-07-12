@@ -4,14 +4,20 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import UserScoreCard from "./UserScoreCard.jsx";
 
-function ShowLeaderBoard() {
+function ShowLeaderBoard({ quizId }) {
     const [ranks, setRanks] = useState([]);
+
+    //const leaderBoardUrl = `http://elsa-user-score:8080/api/quiz/leaderboard/${quizId}`;
+    const leaderBoardUrl = `http://localhost:8080/api/quiz/leaderboard/${quizId}`;
+
+    //console.log("leader board: ", leaderBoardUrl);
 
     useEffect(() => {
         const fetchLeaderboard = () => {
+
             axios
-                .get('http://localhost:8080/api/quiz/leaderboard/68712a0ce8b11d4ba6baa8b9')
-                //.get('http://elsa-user-score:8080/api/quiz/leaderboard/68712a0ce8b11d4ba6baa8b9')
+                .get(leaderBoardUrl) // + quizId.toString())
+                //.get('http://elsa-user-score:8080/api/quiz/leaderboard/' + quizId)
                 .then((res) => {
                     setRanks(res.data);
                 })
